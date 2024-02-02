@@ -1,0 +1,2 @@
+# Learnsmasher-internship
+Vedika Phadatare 
