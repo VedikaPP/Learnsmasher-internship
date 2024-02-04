@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background:url("Airline.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+}
+nav{
+    height: 50px;
+    width: 100%;
+    padding: 20px 0;
+}
+.container{
+    width: 1200px;
+    max-width: 85%;
+    margin: 0 auto;
+}
+nav ul{
+    display: flex;
+    justify-content: flex-start;
+    margin: 0px 6px;
+}
+nav ul li a{
+    color: #ffffff;
+    padding: 10px;
+    text-transform: uppercase;
+    margin-left: 30px;
+}
+nav ul li a:hover, a.active{
+    background-color: #4a4b4e;
+    border-radius: 5px;
+}
+.main-content{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 70px;
+    align-items: center;
+}
+.booking-content{
+    color: #090909;
+    width: 130%;
+    float: left;
+    margin-left: 50px;
+}
+.booking-content h1{
+    font-size: 60px;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    width: 130%;
+    color: #cc62c1;
+    font-weight: 400;
+}
+.booking-form{
+    background-color: #dddd67;
+    border: 1px solid #0f0e0e;
+    padding: 10px;
+    border-radius: 5px;
+    float: right;
+    width: 65%;
+    margin-left: 180px;
+}
+.booking-form h3{
+    margin: 10px 0px;
+}
+.booking-form  .input-group{
+    margin: 10px 0;
+}
+.booking-form  .calculations{
+    margin: 10px 0;
+}
+.booking-form  .calculations p{
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.booking-form input{
+    width: 100%;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: #b1bcf0;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+.f-class{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.inp-width{
+    min-width: 300px;
+}
+.plus-minus-btn{
+    color: #f01212;
+    font-size: 30px;
+    padding: 2px;
+    margin: 10px 5px 0px 0px;
+    word-spacing: 20px;
+    cursor: pointer;
+}
+.booking-form .inputs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.btn-style{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: #f8f4f4;
+    font-weight: 500;
+    background-color:  #7375f1;
+}
+.amount{
+    display: flex;
+    justify-content: space-between;
+}
+#congrats-message {
+    padding: 200px;
+    width: 100%;
+    display: none;   
+    color: #ec1515;
+    
+}
+</style>
+<body>
+    <!--Header and Menu Section-->
+    <header class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a class="active" href="#">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Booking Section-->
+    <main class="main-content container">
+
+        <div class="booking-content">
+            <br><br><br><br><br><h1>Vedika's Booking Platform</h1><br><br>
+            <p><b>An Vedika's online Booking flight booking platform offering a user-friendly interface for seamless reservations, secure payments, and comprehensive flight information. Features include real-time alerts, customer reviews, and exclusive deals for an enhanced travel experience.</b></p>
+        </div>
+
+
+        <div class="booking-form" id="booking-area">
+            <h3>Book Flight Time</h3>
+
+            <div class="input-group">
+                <label for="">Flying From</label>
+                <input class="inp-style" type="text" name="" placeholder="Delhi">
+            </div>
+            <div class="input-group">
+                <label for="">Flying To</label>
+                <input class="inp-style" type="text" name="" placeholder="Jaipur">
+            </div>
+
+            <div class="inputs">
+                <div class="input-group">
+                    <label" for="">Departure</label>
+                        <input class="inp-style" type="date" name="">
+                </div>
+                <div class="input-group">
+                    <label for="">Return</label>
+                    <input class="inp-style" type="date" name="">
+                </div>
+            </div>
+
+            <div class="input-group f-class">
+                <div>
+                    <label for="">First Class ($150)</label>
+                    <input class="inp-style inp-width" type="number" name="" id="firstClass-count" value="0">
+                </div>
+                <div class="plus-minus-btn">
+                    <p><span onclick="handleTicketChange('firstClass', true)">+</span> <span
+                            onclick="handleTicketChange('firstClass', false)">-</span> </p>
+                </div>
+            </div>
+
+            <div class="input-group f-class">
+                <div>
+                    <label for="">Economy ($100)</label>
+                    <input class="inp-style inp-width" type="number" name="" value="0" id="economy-count">
+                </div>
+                <div class="plus-minus-btn">
+                    <p><span onclick="handleTicketChange('economy', true)">+</span> <span
+                            onclick="handleTicketChange('economy', false)">-</span></p>
+                </div>
+            </div>
+            <div class="calculations">
+                <div class="amount">
+                    <div class="left">
+                        <p>Subtotal</p>
+                    </div>
+                    <div class="right">
+                        <p id="total-amount">$00</p>
+                    </div>
+                </div>
+
+                <div class="amount">
+                    <div class="left">
+                        <p>Charge 10% VAT</p>
+                    </div>
+                    <div class="right">
+                        <p id="vat-amount">$00</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="amount">
+                    <div class="left">
+                        <h4>Total</h4>
+                    </div>
+                    <div class="right">
+                        <p id="grand-total">$00</p>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-style" onclick="confirmMassege()">Book Now</button>
+        </div>
+        <div id="congrats-message">
+            <h1>Congrats Your Booking is Completed</h1>
+            <br><h3>Thank You </h5>
+        </div>
+    </main>
+
+    <!--Thank You-->
+
+    <script>
+
+        // Plus Minus button event handler 
+        function handleTicketChange(ticket, isIncrease) {
+            const ticketCount = getInputValue(ticket);
+            let ticketNewCount = ticketCount;
+            if (isIncrease == true) {
+                ticketNewCount = ticketCount + 1;
+            }
+            if (isIncrease == false && ticketCount > 0) {
+                ticketNewCount = ticketCount - 1;
+            }
+            document.getElementById(ticket + '-count').value = ticketNewCount;
+            let ticketTotal = 0;
+            if (ticket == 'firstClass') {
+                ticketTotal = ticketNewCount * 150;
+            }
+            if (ticket == 'economy') {
+                ticketTotal = ticketNewCount * 100;
+            }
+            calculateTotal();
+        }
+
+        // Total ticket price calculation 
+        function calculateTotal() {
+            const firstClassCount = getInputValue('firstClass');
+            const economyCount = getInputValue('economy');
+
+            const totalAmount = firstClassCount * 150 + economyCount * 100;
+            document.getElementById('total-amount').innerText = '$' + totalAmount;
+
+            const vat = Math.round(totalAmount * 0.1);
+            document.getElementById('vat-amount').innerText = '$' + vat;
+
+            const grandTotal = totalAmount + vat;
+            document.getElementById('grand-total').innerText = "$" + grandTotal;
+        }
+
+        // Get User Input Value
+        function getInputValue(ticket) {
+            const ticketInput = document.getElementById(ticket + '-count');
+            const ticketCount = parseInt(ticketInput.value);
+            return ticketCount;
+        }
+
+        // Congrats message funtion
+        function confirmMassege() {
+            document.getElementById('booking-area').style.display = 'none';
+            document.getElementById('congrats-message').style.display = 'block';
+        }
+
+        // Thank you for visiting my code.
+    </script>
+</body>
+
+</html>
+
