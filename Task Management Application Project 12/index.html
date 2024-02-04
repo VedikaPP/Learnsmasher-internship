@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tasks Management Application</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script data-two_delay_id="two_65bc8f8f1a17b" data-two_delay_src="script.js" defer></script>
+</head>
+<style>
+    body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+  background-color: #9e55f1;
+}
+
+.container {
+  max-width: 600px;
+  margin-top: 100px;
+  margin-right: 10px;
+  margin-bottom: auto;
+  margin-left: 250px;
+  padding: 20px;
+  background-color: #edc2c2;
+  border-radius: 10px;
+  box-shadow: 2 10px 10px rgba(10, 10, 10, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 5px 0 0 5px;
+  border: none;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #515dff;
+  color: #fff;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;  
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff403a;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  
+}
+
+li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+li:hover {
+  background-color: #f2f2f2;
+}
+
+li span {
+  flex-grow: 1;
+  margin-right: 0px;
+}
+
+li button {
+  background-color: transparent;
+  border: none;
+  color: #4e4d4d;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+li button:hover {
+  color: #300df3;
+}
+</style>
+<body>
+    <div class="container">
+        <h1>Tasks Management</h1>
+        <div class="input-container">
+            <input type="text" id="taskInput" placeholder="Add new task...">
+            <button onclick="addTask()">Add</button>
+        </div>
+        <ul id="taskList"></ul>
+    </div>
+</body>
+<script>
+  function addTask() {
+      var input = document.getElementById("taskInput");
+      var task = input.value;
+      input.value = "";
+
+      if (task === "") {
+          alert("Please enter a task!");
+          return;
+      }
+
+      var taskList = document.getElementById("taskList");
+      var li = document.createElement("li");
+      li.appendChild(document.createTextNode(task));
+
+      var taskId = "task" + Date.now();
+      li.id = taskId;
+
+      var removeButton = document.createElement("button");
+      removeButton.className = "remove-button";
+      removeButton.appendChild(document.createTextNode("Remove"));
+      removeButton.onclick = function () {
+          removeTask(taskId);
+      };
+      li.appendChild(removeButton);
+
+      
+      var editButton = document.createElement("button");
+      editButton.className = "edit-button";
+      editButton.appendChild(document.createTextNode("Edit"));
+      editButton.onclick = function () {
+          editTask(taskId);
+      };
+      li.appendChild(editButton);
+
+      taskList.appendChild(li);
+  }
+
+  function removeTask(taskId) {
+      var taskElement = document.getElementById(taskId);
+      if (taskElement) {
+          taskElement.remove();
+      }
+  }
+
+  function editTask(taskId) {
+      var taskElement = document.getElementById(taskId);
+      if (taskElement) {
+          var newTask = prompt("Edit task:", taskElement.firstChild.nodeValue);
+          if (newTask !== null && newTask !== "") {
+              taskElement.firstChild.nodeValue = newTask;
+          }
+      }
+  }
+</script>
+</html>
