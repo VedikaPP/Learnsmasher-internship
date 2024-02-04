@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+*{
+    /* box-sizing: border-box; */
+    margin: 0;
+    padding: 0;
+    font-family: popins;
+}
+
+/*this is for navbar*/
+nav{
+    display: flex;
+    height: 5rem;
+    position: fixed;
+    background: transparent;
+    background-color: rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+    color: white;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-top: 0;
+    z-index: 2;
+}
+.logo{
+    width: 30%;
+}
+.ele{
+    display: flex;
+    width: 70%;
+    justify-content: flex-end;
+    align-items: center;
+}
+.ele ul{
+    display: flex;
+    height: 2rem;
+}
+.ele ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2rem;
+    margin-right: 40px;
+    font-size: 20px;
+}
+.ele ul li a{
+    text-decoration: none;
+    color: white;
+}
+.ele ul li a:hover{
+    color: white;
+    scale: 1.1;
+}
+.ele ul li a::target-text{
+    color:red;
+}
+
+
+/*here start for the secion 1 home section */
+.section{
+    display: flex;
+    height: 40rem;
+    background-color: #212121;
+}
+.pg1{
+    display: flex;
+    height: 100%;
+    padding-top: 5rem;
+    background-color: #212121;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+nav h3 a {
+    height:3rem;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    padding-left: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.about-content{
+display: flex;
+max-width:2000px;
+width: fit-content;
+justify-content: center;
+align-items: center;
+background-color: #212121;
+color: white;
+flex-wrap: wrap;
+height: fit-content;
+padding-bottom: 50px;
+padding-top: 50px;
+}
+.about-intro{
+    height: 100%;
+    width: 50%;
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.about-image{
+    height: 100%;
+    width: fit-content;
+    float: 0 0 auto;
+    z-index: 1;
+    filter: drop-shadow(5px 5px 10px rgba(255, 256, 256, 0.1));
+    padding-right: 60px;
+    display: flex;
+    flex-direction: column;
+}
+.about-image img{
+    height: 27rem;
+    width: 19rem;
+    position: relative;
+    top: 10%;
+    left: 10%;
+}
+.about-intro .h1{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    line-height: 5rem;
+}
+
+.about-intro .h1 h1{
+    font-size: 70px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+}
+
+.about-intro img:hover{
+    transform: translate3d(2px ,2px ,20px);
+    scale: 1.1;
+    transition: 0.3s ease-in-out;
+}
+
+/*about section-2 is start from here*/
+.pg2{
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.head{
+    width: 100%;
+    height: 4rem;
+    margin-top: 2rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.pg2 .container{
+    background-color: #212121;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px 0px;
+}
+.container .left{
+    width: 400px;
+    height: 90%;
+    background-color: #1b1b1b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    margin: 20px;
+    filter: drop-shadow(1px 1px 3px rgba(255, 256, 256, 0.1));
+}
+.container .left:hover{
+    scale: 1.02;
+    transition: 0.5s ease-in-out;
+    filter: drop-shadow(5px 5px 10px rgba(255, 256, 256, 0.1));
+
+}
+
+.container .left img{
+    height: 430px;
+    width: 300px;
+    position: relative;
+    filter: drop-shadow(5px 5px 10px rgba(255, 256, 256, 0.1));
+}
+.container .right{
+    background-color: #212121;
+    color: #e0e0e0;
+    height: 100%;
+    width: 50%;
+    max-width: 900px;
+    max-height: 400px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+.container .intro{
+    display: flex;
+    height: 40%;
+    width: 100%;
+    margin-top: 2rem;
+    font-size: 20px;
+    overflow: auto;
+    justify-content: center;
+}
+.container .education{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+.education button{
+    margin-top: 50px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #636363;
+    color: #e0e0e0;
+}
+.education button a{
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+
+.techpic{
+    display: flex;
+    width: 100%;
+    max-width: 910px;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 40px;
+    overflow: auto;
+    flex-wrap: wrap;
+}
+.techpic img:hover{
+    filter: drop-shadow(5px 5px 10px rgba(255,255,255,0.3));
+}
+
+/*here start my project section*/
+
+.pg3{
+    display: flex;
+    height:max-content;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.allproject{
+    height: max-content;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 30px;
+    padding: 30px;
+    background-color: #bd1f1f;
+}
+.prow{
+    height: max-content;
+    width: 100%;
+    max-width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 30px;
+    overflow: auto;
+    padding: 20px;
+}
+.mainprj{
+    height: 400px;
+    width: 600px;
+    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    color: #e0e0e0;
+    background-color: #1b1b1b;
+}
+.mainprj button a{
+    text-decoration: none;
+    color: black;
+}
+.mainprj:hover{
+    /* box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.7); */
+    filter: drop-shadow(5px 5px 10px rgba(255, 256, 256, 0.1));
+    scale: 1.0000001;
+    background: linear-gradient(white,rgb(255, 255, 255),rgb(0, 0, 0));
+    color: #1b1b1b;
+}
+
+.photu{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    background-color: #dfdfdf;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    overflow: hidden;
+}
+.disc{
+    height: 30%;
+    width: 100%;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-top: 10px;
+    font-weight: bolder;
+
+    align-items:center;
+    display: flex;
+    flex-direction: column;
+}
+
+.disc button{
+    height: fit-content;
+    width: fit-content;
+    padding: 5px 4px;
+    background-color: rgb(9, 111, 243);
+    border-radius: 10px;
+    margin-top: 20px;
+    font-weight: bolder;
+}
+.disc h2{
+    width: fit-content;
+}
+.photu img{
+    width: 100%;
+}
+
+/*page 4*/
+.pg4{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+.pg5 form{
+    margin-top: 25px;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid white;
+    padding: 20px;
+    gap: 30px;
+    border-radius: 10px;
+}
+.pg5 form div{
+    width: 90%;
+}
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    width:70%;
+    background-color: #212121;
+    border-radius: 10px;
+}
+form button{
+    padding: 0px 10px ;
+    font-size: 15px;
+    font-weight: bolder;
+    border-radius: 6px;
+    background-color: rgb(9, 111, 243);
+
+}
+
+
+footer{
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    background-color: #212121;
+    align-items: center;
+    color: #636363;
+    flex-direction: column;
+    padding: 30px 0 0 0 ;
+    overflow: hidden;
+}
+footer a{
+    text-decoration: none;
+    color: #636363;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+.heart{
+    color: rgb(158, 51, 51);
+}

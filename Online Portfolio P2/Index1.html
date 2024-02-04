@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="Portfolio.png">
+
+    <title>VEDIKA PHADATARE</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+*{
+    
+    margin: 0;
+    padding: 0;
+    font-family: popins;
+}
+
+
+nav{
+    display: flex;
+    height: 5rem;
+    position: fixed;
+    background: transparent;
+    background-color: rgba(201, 69, 69, 0.5);
+    backdrop-filter: blur(5px);
+    color: white;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-top: 0;
+    z-index: 2;
+}
+.logo{
+    width: 30%;
+}
+.ele{
+    display: flex;
+    width: 70%;
+    justify-content: flex-end;
+    align-items: center;
+}
+.ele ul{
+    display: flex;
+    height: 2rem;
+}
+.ele ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2rem;
+    margin-right: 40px;
+    font-size: 20px;
+}
+.ele ul li a{
+    text-decoration: none;
+    color: white;
+}
+.ele ul li a:hover{
+    color: white;
+    scale: 1.1;
+}
+.ele ul li a::target-text{
+    color:rgb(186, 154, 154);
+}
+
+
+
+.section{
+    display: flex;
+    height: 40rem;
+    background-color: #212121;
+}
+.pg1{
+    display: flex;
+    height: 100%;
+    padding-top: 5rem;
+    background-color: #1ccbea;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+nav h3 a {
+    height:3rem;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    padding-left: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.about-content{
+display: flex;
+max-width:2000px;
+width: fit-content;
+justify-content: center;
+align-items: center;
+background-color: #fbf8f8;
+color: rgb(71, 8, 96);
+flex-wrap: wrap;
+height: fit-content;
+padding-bottom: 50px;
+padding-top: 50px;
+}
+.about-intro{
+    height: 100%;
+    width: 50%;
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.about-image{
+    height: 100%;
+    width: fit-content;
+    float: 0 0 auto;
+    z-index: 1;
+    filter: drop-shadow(5px 5px 10px rgba(255, 256, 256, 0.1));
+    padding-right: 60px;
+    display: flex;
+    flex-direction: column;
+}
+.about-image img{
+    height: 27rem;
+    width: 19rem;
+    position: relative;
+    top: 10%;
+    left: 10%;
+}
+.about-intro .h1{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    line-height: 5rem;
+}
+
+.about-intro .h1 h1{
+    font-size: 70px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+}
+
+.about-intro img:hover{
+    transform: translate3d(2px ,2px ,20px);
+    scale: 1.1;
+    transition: 0.3s ease-in-out;
+}
+
+
+.pg2{
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.head{
+    width: 100%;
+    height: 4rem;
+    margin-top: 2rem;
+    color: rgb(235, 235, 240);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri , 'Trebuchet MS', sans-serif;
+}
+.pg2 .container{
+    background-color: #efe8e8;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px 0px;
+}
+.container .left{
+    width: 400px;
+    height: 90%;
+    background-color: #f6f9f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    margin: 20px;
+    filter: drop-shadow(1px 1px 3px rgba(255, 256, 256, 0.1));
+}
+.container .left:hover{
+    scale: 1.02;
+    transition: 0.5s ease-in-out;
+    filter: drop-shadow(5px 5px 10px rgba(255, 256, 256, 0.1));
+
+}
+
+.container .left img{
+    height: 430px;
+    width: 300px;
+    position: relative;
+    filter: drop-shadow(5px 5px 10px rgba(255, 256, 256, 0.1));
+}
+.container .right{
+    background-color: #8b083c;
+    color: #0c0c0c;
+    height: 100%;
+    width: 50%;
+    max-width: 900px;
+    max-height: 400px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+.container .intro{
+    display: flex;
+    height: 40%;
+    width: 100%;
+    margin-top: 2rem;
+    font-size: 20px;
+    overflow: auto;
+    justify-content: center;
+}
+.container .education{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+.education button{
+    margin-top: 50px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #f9f5f5;
+    color: #0c0c0c;
+}
+.education button a{
+    font-size: 20px;
+    color: rgb(251, 248, 248);
+    text-decoration: none;
+}
+
+
+.techpic{
+    display: flex;
+    width: 100%;
+    max-width: 910px;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 40px;
+    overflow: auto;
+    flex-wrap: wrap;
+}
+.techpic img:hover{
+    filter: drop-shadow(5px 5px 10px rgba(255,255,255,0.3));
+}
+
+/*here start my project section*/
+
+.pg3{
+    display: flex;
+    height:max-content;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.allproject{
+    height: max-content;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 30px;
+    padding: 30px;
+    background-color: #bd1f1f;
+}
+.prow{
+    height: max-content;
+    width: 100%;
+    max-width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 30px;
+    overflow: auto;
+    padding: 20px;
+}
+.mainprj{
+    height: 400px;
+    width: 600px;
+    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    color: #e0e0e0;
+    background-color: #1b1b1b;
+}
+.mainprj button a{
+    text-decoration: none;
+    color: black;
+}
+.mainprj:hover{
+    /* box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.7); */
+    filter: drop-shadow(5px 5px 10px rgba(255, 256, 256, 0.1));
+    scale: 1.0000001;
+    background: linear-gradient(white,rgb(255, 255, 255),rgb(0, 0, 0));
+    color: #1b1b1b;
+}
+
+.photu{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    background-color: #dfdfdf;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    overflow: hidden;
+}
+.disc{
+    height: 30%;
+    width: 100%;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-top: 10px;
+    font-weight: bolder;
+
+    align-items:center;
+    display: flex;
+    flex-direction: column;
+}
+
+.disc button{
+    height: fit-content;
+    width: fit-content;
+    padding: 9px 8px;
+    background-color: rgb(9, 111, 243);
+    border-radius: 10px;
+    margin-top: 20px;
+    font-weight: bolder;
+}
+.disc h2{
+    width: fit-content;
+}
+.photu img{
+    width: 100%;
+}
+
+/*page 4*/
+.pg4{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+.pg5 form{
+    margin-top: 25px;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid white;
+    padding: 20px;
+    gap: 30px;
+    border-radius: 10px;
+}
+.pg5 form div{
+    width: 90%;
+}
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    width:70%;
+    background-color: #212121;
+    border-radius: 10px;
+}
+form button{
+    padding: 0px 10px ;
+    font-size: 30px;
+    font-weight: bolder;
+    border-radius: 6px;
+    background-color: rgb(9, 111, 243);
+
+}
+
+
+footer{
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    background-color: #f2ebeb;
+    align-items: center;
+    color: #0d0d0d;
+    flex-direction: column;
+    padding: 30px 0 0 0 ;
+    overflow: hidden;
+}
+footer a{
+    text-decoration: none;
+    color: #090909;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+.heart{
+    color: rgb(189, 20, 20);
+}
+</style>
+<body>
+
+    <nav>
+        <div class="logo">
+            <!-- <h3><a href="https://github.com/VedikaPP">VEDIKA PHADATARE</a></h3> -->
+            <a href="#Home"><img src="Home.png" style="height: 150px;filter: drop-shadow(10px 10px 50px rgb(243, 241, 241)); width: max-content;"></a>
+        </div>
+        <div class="ele">
+            <ul>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Skill">Skill</a></li>                
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <section id="Home" class="section pg1">
+
+                <div class="portfolio-row about-content">
+                    <div class="about-intro">
+                        <div class=""><h2><img width="80" height="70" src="Pf.png" alt="waving-hand-emoji" style="margin-top: 10px;"/> Hey  I'm<br></h2></div>
+                        <div class="h1"><h1>VEDIKA PHADATARE</h1></div>
+                        <div class="h1" style="line-height:2rem;"><h3> Webdeveloper , based in India</h3></div>
+                        <div><a href="http://linkedin.com/in/vedika-phadatare" target="_blank"><img width="45" height="45" src="Linkdin.png" alt="click" style="margin-top: 10px; " /></a></div>
+                        <div><a href="https://github.com/VedikaPP" target="_blank"><img width="45" height="45" src="Github.png" alt="click" style="margin-top: 10px; " /></a></div>
+                    </div>
+                    <div class="about-image">
+                        <img src="Girl.png">
+                    </div>
+                </div>
+        </section><hr>
+        <div id="About" class="section pg2">
+            <div class="head"><b>About Me</b></div><hr width="200px" />
+            <div class="container">
+                <div class="left"><img src="vediportfolio.png" alt=""></div>
+                <div class="right">
+                    <div class="intro">
+                        <p>I'm <b>Vedika Phadatare</b>, a passionate <b>Web developer</b> dedicated to crafting 
+                            exceptional digital experiences. With 1 year of experience in the industry, I specialize 
+                            in HTML, CSS  & JavaScript and React.js for the frontend development.
+                            For Backend Development Node.js & Exprees.js .Use MongoDB For work with Database.
+                            I believe in collaboration, innovation, and continuous learning. I'm committed to staying
+                            updated with the latest trends and technologies in the ever-evolving realm of web 
+                            development.<br><br> My goal is to not just meet client expectations but exceed them by 
+                            delivering high-quality, scalable, and efficient solutions.
+                        </p></div>
+                    <div class="education">                    
+                        <button> <div><a href="Resume Vedika.pdf" target="_blank"><img width="100" height="20" src="Resume.png" alt="click" style="margin-top: 10px; " /></a></div></button>
+                    </div>
+                </div>
+            </div>
+        </div><hr>
+        <div id="Skill" class="section pg3">
+            <div class="head"><b>Tech Stack</b></div><hr width="200px" />
+            <div class="techpic">
+                <img src="html.png"  height="150px" width="150px">
+                <img src="css.png"height="150px" width="150px">
+                <img src="js.png"height="150px" width="150px" >
+                <img src="Linkdin.png"height="150px" width="150px" >
+                <img src="react.png"  height="150px" width="150px" >
+                <img src="Github.png"  height="150px" width="150px">
+                <img src="node.png"height="150px" width="150px">                
+                <img src="mongo.png"height="150px" width="150px"  >
+                
+            </div>
+                  
+        <div id="Connect" class="section pg4">
+        <div class="head"><b>Contact Me</b></div><hr width="300px" />
+        <div class="form">
+        <form id="contactForm">
+            <div>
+                <input  placeholder="Enter Your Name here...." type="text" id="name" name="name"  style="width: 200%; height: 90px;" required>
+            </div>
+            <div>
+                
+                <input placeholder="Enter Your Email-here...." type="email" id="email" name="email" style="width: 200%; height: 90px;" required>
+            </div>
+            <div>
+                <textarea placeholder="Enter Your Message Here...." id="message" name="message"  style="width: 200%; height: 90px;" required></textarea>
+            </div>
+            <button type="submit" >Submit</button>
+        </form>
+        </div>
+        </div>  <hr>         
+    </main>
+    <footer>
+        <h3 > made with <span class="heart">&hearts;</span > by<a href="https://www.linkedin.com/in/vedika-phadatare/">  Vedika Phadatare</a></h3><h3>&copy; 2024, All right reserved.</h3>
+    </footer>
+
+    
+</body>
+</html>
